@@ -94,6 +94,7 @@ main {
   transform: translate(-0.5rem, -0.5rem);
   background-color: var(--green);
   color: var(--light-navy);
+  font-weight: 600;
 }
 
 .subheading-big {
@@ -152,7 +153,7 @@ main {
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 16rem;
 }
 
 .grid {

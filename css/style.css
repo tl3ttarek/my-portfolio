@@ -49,7 +49,7 @@
 .hero-container {
   max-width: 144rem;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 18rem;
 }
 
 .heading-text {
@@ -89,6 +89,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .skills-item {
@@ -99,6 +100,11 @@
 
 .skills-item i {
   color: var(--green);
+  font-size: 2.4rem;
+}
+
+.skills-item p {
+  line-height: 1;
 }
 
 .about-img-box {
@@ -135,7 +141,7 @@
 }
 
 .work-item:hover {
-  transform: translate(-2rem, 0);
+  transform: translate(-1rem, 0);
 }
 
 .work-item:nth-of-type(odd) {
@@ -154,6 +160,10 @@
 
 .work-item-paragraph {
   margin-bottom: 3.2rem;
+}
+
+.work-item-img-box {
+  min-width: 100%;
 }
 
 .work-item-img-box:nth-of-type(odd) img {
@@ -177,6 +187,10 @@
 
 .work-item-img {
   width: 100%;
+}
+
+.work-item-cta {
+  display: flex;
 }
 
 /* Contact section */
