@@ -21,4 +21,55 @@ links.forEach((link) => {
 });
 
 /////////////////////////////////////////////////////
-// Navigation disappear on scroll down and appear on scroll up
+// Fixing Projects images on mobile
+
+// Get all images
+const images = document.querySelectorAll(".work-item-img-box");
+const mediaQuery = window.matchMedia("(max-width: 75em)");
+
+function handleTabletChange(e) {
+  if (e.matches) {
+    fixImages();
+  }
+}
+
+function fixImages() {
+  for (const img of images) {
+    workitem = img.parentElement;
+    workitem.insertBefore(img, workitem.firstChild);
+  }
+}
+
+mediaQuery.addEventListener("change", handleTabletChange);
+
+// Initial check
+handleTabletChange(mediaQuery);
+
+/////////////////////////////////////////////////////
+// Mobile navigation buttons
+
+// Get all buttons
+const navButtons = document.querySelectorAll(".icon--mobile-nav");
+const header = document.querySelector(".header");
+
+// Add click event
+navButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    // Toggle class
+    header.classList.toggle("nav--open");
+  });
+});
+
+/////////////////////////////////////////////////////
+// Mobile navigation links
+
+// Get all links
+const navLinks = document.querySelectorAll(".nav-item");
+
+// Add click event
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    // Remove class
+    header.classList.remove("nav--open");
+  });
+});
