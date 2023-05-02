@@ -157,8 +157,12 @@
   transform: translate(-1rem, 0);
 }
 
-.work-item {
-  padding-left: 0;
+.work-item:nth-of-type(even) {
+  padding-left: 5rem;
+}
+
+.work-item:nth-of-type(odd) {
+  padding-right: 5rem;
 }
 
 .work-item-text {
