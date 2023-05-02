@@ -187,6 +187,9 @@
 
   .nav--open .ph-x {
     display: block;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
   }
 
   .ph-list {
@@ -284,6 +287,11 @@
 
   .header {
     padding: 4rem;
+  }
+
+  .nav-list {
+    left: 20vw;
+    width: 80vw;
   }
 
   .about-img-box {

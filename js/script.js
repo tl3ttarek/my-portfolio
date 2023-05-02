@@ -73,3 +73,17 @@ navLinks.forEach((link) => {
     header.classList.remove("nav--open");
   });
 });
+
+/////////////////////////////////////////////////////
+// Backdrop click
+
+// Get backdrop
+const backdrop = document.querySelector(".background-blur");
+
+// Add click event
+backdrop.addEventListener("click", (e) => {
+  // Remove class
+  header.classList.remove("nav--open");
+});
+
+/////////////////////////////////////////////////////
