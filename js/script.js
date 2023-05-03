@@ -45,6 +45,20 @@ mediaQuery.addEventListener("change", handleTabletChange);
 // Initial check
 handleTabletChange(mediaQuery);
 
+// Reverse the fix on desktop
+window.addEventListener("resize", (e) => {
+  if (e.target.innerWidth > 75 * 16) {
+    for (let i = 0; i < images.length; i++) {
+      workitem = images[i].parentElement;
+      if (i % 2 == 0) {
+        workitem.insertBefore(images[i], workitem.firstChild);
+      } else {
+        workitem.insertBefore(images[i], workitem.lastChild);
+      }
+    }
+  }
+});
+
 /////////////////////////////////////////////////////
 // Mobile navigation buttons
 
